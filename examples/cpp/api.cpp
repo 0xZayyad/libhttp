@@ -11,12 +11,12 @@ int main()
 
   try
   {
-    HTTPSession httpSession{"http://localhost:3001/api/test"};
+    HTTPSession httpSession{"https://example.com"};
     httpSession.setOption(HTTP_OPTIONS_VERBOSITY, verbose);
 
     httpSession.connect();
-    httpSession.httpGet(); // perform GET request
-    // httpSession.writeResponseFriendly(stdout); // write response to `stdout` (standard output)
+    httpSession.httpGet();                     // perform GET request
+    httpSession.writeResponseFriendly(stdout); // write response to `stdout` (standard output)
 
     // disconnect and free memory
     httpSession.disconnect();
@@ -24,6 +24,6 @@ int main()
   catch (HTTPException err)
   {
     std::cout << "Error: " << err.getError() << std::endl;
-    return -1;
+    return 1;
   }
 }

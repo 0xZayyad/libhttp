@@ -265,7 +265,7 @@ static void applyCommonOptions(HTTPSession &s, const CmdOptions &opt)
 		{
 			all += "Content-Type: ";
 			all += opt.contentType;
-			all += "\r\n";
+			// all += "\r\n";
 		}
 		if (!all.empty())
 			s.setOption(HTTP_OPTIONS_HEADERS_INCLUDE, all.c_str());
