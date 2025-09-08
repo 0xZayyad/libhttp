@@ -1,8 +1,6 @@
 main:
 	gcc -c -g lib/libhttp.c -o bin/libhttp.o
 	ar rcs bin/libhttp.a bin/libhttp.o
-	# cp libhttp.a libhttp.o -t /usr/local/lib 
-	# cp libhttp.c libhttp.h libhttp.hpp -t /usr/local/include/libhttp 
 
 .PHONY: all clean lib httpc
 

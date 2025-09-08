@@ -2474,7 +2474,7 @@ int __wait_response(http_session http)
                 http->error_code = HTTP_CONNECTION_RESET;
                 break;
             }
-            printf("PPPP: %s", p);
+            printf("%s", p);
             p += bytes_received;
             *p = 0;
             if (!body && strstr(response, "\r\n\r\n"))
@@ -2551,7 +2551,7 @@ int __wait_response(http_session http)
             {
                 if (encoding == length)
                 {
-                    printf("p - body %d\n", (p - body));
+                    // printf("p - body %d\n", (p - body));
                     if (p - body <= remaining)
                     {
                         sprintf(http->response.body + strlen(http->response.body),
