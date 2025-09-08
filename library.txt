@@ -1,0 +1,73 @@
+Request Methods
+
+HTTP_GET = 1,
+HTTP_CONNECT,
+HTTP_POST,
+HTTP_PUT,
+HTTP_PATCH,
+HTTP_HEAD,
+HTTP_OPTIONS,
+HTTP_DELETE,
+HTTP_TRACE,
+
+options
+
+HTTP_OPTIONS_URL         
+HTTP_OPTIONS_HOSTNAME
+HTTP_OPTIONS_PORT
+HTTP_OPTIONS_PATH
+HTTP_OPTIONS_QUERY
+HTTP_OPTIONS_VERBOSITY    
+HTTP_OPTIONS_REQUEST_METHOD
+HTTP_OPTIONS_HEADER
+HTTP_OPTIONS_HEADERS
+HTTP_OPTIONS_USER_AGENT
+HTTP_OPTIONS_CONTENT_TYPE
+HTTP_OPTIONS_LOAD_COOKIES
+HTTP_OPTIONS_LOAD_COOKIES_FILE
+HTTP_OPTIONS_HTTP_VERSION
+HTTP_OPTIONS_TLS_VERSION  
+HTTP_OPTIONS_POST_BODY
+HTTP_OPTIONS_POST_BODY_FILE
+HTTP_OPTIONS_PUT_BODY
+HTTP_OPTIONS_PUT_BODY_FILE
+HTTP_OPTIONS_SENT_HEADERS
+HTTP_OPTIONS_SENT_BODY
+HTTP_OPTIONS_TIMEOUT
+HTTP_OPTIONS_REDIRECTS_ALLOW
+HTTP_OPTIONS_REDIRECTS_DISALLOW
+
+
+HTTP_OPTIONS_URL -> url;
+HTTP_OPTIONS_PROXY_URL -> 
+
+http_proxy_send_request()   ->      Send connection request to server
+http_proxy_session_start()  ->      Start the http_proxy session
+
+
+DON'T FORGET:
+    connect time out
+    recv time out             --- DONE
+    http_option_get()         --- DONE
+    http_get_status_code()    --- DONE
+    HTTP_OPTIONS_USER_AGENT   --- DONE
+    HTTP_OPTIONS_CONNECTION   --- DONE
+    HTTP_OPTIONS_CONTENT_TYPE --- DONE
+    Following redirects
+    remove all printfs
+    http_perform_req()        --- DONE
+    http_download()
+    enum http_download()
+    http_write_res_fp()       --- DONE
+    http_write_res_headers_fp()   DONE
+    http_write_res_body_fp()  --- DONE
+    http_write_req_res_fp()   --- DONE
+    http_write_req_res_headers_fp() --- DONE
+    http_write_req_res_body_fp()    --- DONE
+    libhttp_get_version()           --- DONE
+    fix query
+    http_options_clear()
+    http_get_cert_verify_result()
+    http_url_encode()s
+    http_base64_encode()
+    http_userauth_basic(http_session http, const char *username, const char *password);
